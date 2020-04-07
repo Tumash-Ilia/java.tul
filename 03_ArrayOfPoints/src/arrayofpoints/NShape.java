@@ -18,28 +18,37 @@ public class NShape {
 
     //TODO
     public NShape (Point[] points){
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.points.addAll(Arrays.asList(points));
     }
 
     //TODO
     public NShape (ArrayList<Point> points){
-        throw new UnsupportedOperationException("Not supported yet.");
+        ArrayList<Point> newPoints = (ArrayList<Point>) points.clone();
+        this.points.addAll(newPoints);
     }
 
     public void add(Point p){
+
         points.add(p);
     }
 
     public void add(double x, double y){
+
         points.add(new Point(x, y));
     }
 
     //TODO vyuzit prochazeni ArrayListu po indexech
     public double perim(){
-        throw new UnsupportedOperationException("Not supported yet.");
+        double perim = 0;
+        for (int i = 0; i < points.size() - 1; i++) {
+            perim += Point.distanceOfTwoPoints(points.get(i), points.get(i + 1));
+        }
+        perim += Point.distanceOfTwoPoints(points.get(0), points.get(points.size() - 1));
+        return perim;
     }
 
     public Point getPointAt(int index){
+
         return points.get(index);
     }
 
@@ -57,18 +66,48 @@ public class NShape {
         return nearest;
     }
 
-    public Point getFurthest(){
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Point getFurthest() {
+        double max = Double.MIN_VALUE;
+        Point furthest = null; //inicializace objektu
+        for (Point p : points) {
+            if (p.getDistance() > max) {
+                max = p.getDistance();
+                furthest = p;
+            }
+        }
+        return furthest;
     }
 
     //TODO vrati min vzdalenost mezi body
     public double minDistanceBetween(){
-        throw new UnsupportedOperationException("Not supported yet.");
+        double min = Integer.MAX_VALUE;
+        for (int i = 0;i < this.arrayList.size() - 2;i++){
+            double minTemp = this.arrayList.get(i).getDistanceFromPoint(this.arrayList.get(i + 1));
+            if(minTemp < min){
+                min = minTemp;
+            }
+        }
+        double minTemp = this.arrayList.get(this.arrayList.size()-1).getDistanceFromPoint(this.arrayList.get(0));
+        if(minTemp < min){
+            min = minTemp;
+        }
+        return min;
     }
 
     //TODO vrati max vzdalenost mezi body
     public double maxDistanceBetween(){
-        throw new UnsupportedOperationException("Not supported yet.");
+        double max = Integer.MIN_VALUE;
+        for (int i = 0;i < this.arrayList.size() - 2;i++){
+            double maxTemp = this.arrayList.get(i).getDistanceFromPoint(this.arrayList.get(i + 1));
+            if(maxTemp > max){
+                max = maxTemp;
+            }
+        }
+        double maxTemp = this.arrayList.get(this.arrayList.size()-1).getDistanceFromPoint(this.arrayList.get(0));
+        if(maxTemp > max){
+            max = maxTemp;
+        }
+        return max;
     }
 
     @Override
