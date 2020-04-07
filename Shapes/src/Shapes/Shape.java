@@ -1,9 +1,6 @@
-package pkg05_shapes;
+package Shapes;
 
-/**
- *
- * @author janka
- */
+
 public abstract class Shape {
     
     public abstract double computeArea();

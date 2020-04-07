@@ -1,9 +1,5 @@
-package pkg05_shapes;
+package Shapes;
 
-/**
- *
- * @author janka
- */
 public class Circle extends Shape { //Circle je typove kompatibilni s Shape, Circle IS A Shape
     //data
     private double r;
@@ -19,10 +15,12 @@ public class Circle extends Shape { //Circle je typove kompatibilni s Shape, Cir
     
     //tovarni metoda - factory method
     public static Circle getInstanceD(double d){
+
         return new Circle(d/2);
     }
     
     public static Circle getInstanceR(double r){
+
         return new Circle(r);
     }
     
@@ -38,6 +36,7 @@ public class Circle extends Shape { //Circle je typove kompatibilni s Shape, Cir
     
     @Override
     public double computeArea(){
+
         return Math.PI*r*r;
     }
     

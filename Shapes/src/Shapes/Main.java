@@ -1,16 +1,11 @@
-package pkg05_shapes;
+package Shapes;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author janka
- */
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         Circle c1 = Circle.getInstanceD(8);
         Rectangle r1 = new Rectangle(2, 3);

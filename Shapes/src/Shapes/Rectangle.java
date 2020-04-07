@@ -1,9 +1,6 @@
-package pkg05_shapes;
+package Shapes;
 
-/**
- * Nemenny immutable 
- * @author janka
- */
+
 public class Rectangle extends Shape {
     //data
     private double a;
