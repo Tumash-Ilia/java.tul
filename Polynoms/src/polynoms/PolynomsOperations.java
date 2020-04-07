@@ -1,10 +1,5 @@
-
 package polynoms;
 
-/**
- * Knihovni trida (Library class)
- * @author janvit
- */
 public class PolynomsOperations {
 
     private PolynomsOperations(){ //aby nebylo mozne vytvorit objekt, neni jej potreba
@@ -31,7 +26,28 @@ public class PolynomsOperations {
 
     //TODO
     public static Polynom multiply(Polynom a, Polynom b){
-        throw new UnsupportedOperationException("Not supported yet.");
+        double array[] = new double[10] ;
+        String output = "";
+        double mult;
+        int pow;
+        for (int i = 0; i <= a.getDegree(); i++) {
+            for (int j = 0; j <= b.getDegree(); j++) {
+                mult = a.getCoefAt(i) * b.getCoefAt(j);
+                pow = (a.getDegree()-i) + (b.getDegree()-j);
+                array[pow]+= mult;
+            }
+        }
+        for (int j = array.length-1; j >= 0; j--) {
+            if(array[j]>0){
+                System.out.print(" +"+array[j]+"x^"+j);
+            }
+        }
+        System.out.println("");
+        System.out.println("vypis polynomu");
+        Polynom c = Polynom.getInstanceReverted(array);
+        c.toString();
+
+        return c;
     }
 
     //TODO bonus

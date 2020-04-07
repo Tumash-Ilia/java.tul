@@ -2,11 +2,6 @@ package polynoms;
 
 import java.util.Arrays;
 
-/**
- * Represents a polynom
- * Definuje se pri vytvoreni, pak se uz nemeni - immutable object
- * @author janvit
- */
 public class Polynom {
     //data - clenske instancni promenne (instance attributes, fields)
     //5x3 + 3x2 + 6  6 0 3 5
@@ -48,7 +43,11 @@ public class Polynom {
     //5x3 + 3x2 + 6 pre x = 1; y = 5 + 3 + 6 = 14
     //pouzit Hornerovo schema
     public double computeValue(double x){
-      throw new UnsupportedOperationException("Not supported yet.");
+        double y = 0;
+        for (int i = 0; i < coef.length; i++) {
+            y = y * x + coef[i];
+        }
+        return y;
     }
 
     //gettre
@@ -67,7 +66,27 @@ public class Polynom {
     //TODO vypisat matematicky spravne 5x^3 + ...
     @Override
     public String toString() {
-        return Arrays.toString(coef);
+        String output = "";
+        for (int i = coef.length - 1 ;i >=0 ;i--) {
+            if (coef[i] != 0) {
+                if (coef[i] != 1) {
+                    if (coef[i] > 0) {
+                        output += "+";
+                    }else {
+                        output += " ";
+                    }
+                    output+=coef[i];
+                }
+                if (i > 1) {
+                    output += "x^" + i + " ";
+                } else {
+                    if(i == 1){
+                        output += "x ";
+                    }
+                }
+            }
+        }
+        return output;
     }
 
     //5x3 + 3x2 + 6 zderivovane bude 15x2 + 6x
@@ -81,7 +100,22 @@ public class Polynom {
 
     //TODO bonus
     public double integrate(double a, double b){
-        throw new UnsupportedOperationException("Not supported yet.");
+        double array[] = new double[coef.length];
+        double c = 0;
+        if(a<b){
+            b=c;
+            b=a;
+            a=c;
+        }
+        for (int i =0; i < coef.length; i--) {
+            array[i] = coef.length - i;
+        }
+        double sumA=0, sumB=0;
+        for (int i = 0; i < coef.length; i++) {
+            sumA +=(coef[i]/array[i])*(Math.pow(a, array[i]));
+            sumB +=(coef[i]/array[i])*(Math.pow(b, array[i]));
+        }
+        return sumA - sumB;
     }
 
     public static void main(String[] args) {
@@ -90,5 +124,6 @@ public class Polynom {
         System.out.println(p1);
         System.out.println(p1.getCoefAt(3));
         System.out.println(p1.derivate());
+
     }
 }
