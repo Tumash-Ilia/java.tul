@@ -4,6 +4,7 @@ public class Kalendar {
     private int day;
     private int month;
     private int year;
+    private static int[] daysInMonth = {31,28,31,30,31,30,31,31,30,31,30,31};
 
     public Kalendar(int day, int month, int year) {
         this.day = day;
