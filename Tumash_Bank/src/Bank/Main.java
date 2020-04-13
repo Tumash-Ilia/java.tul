@@ -15,7 +15,7 @@ public class Main {
         clients.get(2).newAccount(120);
 
         for (Client client: clients) {
-            System.out.println(client.ClientName() + " ma " + client.accountSum() + " Kc na uctu");
+            System.out.println(client.ClientName() + " ma " + client.accountSum() + "  Kc na uctu");
         }
 
     }
