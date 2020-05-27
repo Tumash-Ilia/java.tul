@@ -45,9 +45,8 @@ public class XlsxCreator {
      * Metoda vytvoří první řádek tabulky s názvy sloupců
      *
      * @param sheetName název stránky v tabulce
-     * @throws IOException
      */
-    public static void createTable(String sheetName){
+    public static void createTable(String sheetName) {
         Workbook book = new XSSFWorkbook();
         Sheet sheet = book.createSheet(sheetName);
         Row row = sheet.createRow(0);
@@ -90,13 +89,13 @@ public class XlsxCreator {
         cell.setCellValue("Wallet");
 
         sheet.autoSizeColumn(1);
-        try (FileOutputStream out = new FileOutputStream(file.getAbsolutePath())){
+        try (FileOutputStream out = new FileOutputStream(file.getAbsolutePath())) {
             book.write(out);
             book.close();
             System.out.println("Tabulka uspesne vytvorena!");
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             System.out.println("Nejde vytvorit tabulku, tabulka uz existuje");
         }
 
@@ -111,7 +110,7 @@ public class XlsxCreator {
         } catch (NullPointerException e) {
             System.out.println("Tabulka neexistuje");
             return;
-         }
+        }
         System.out.println("Tubalka je smazana");
     }
 

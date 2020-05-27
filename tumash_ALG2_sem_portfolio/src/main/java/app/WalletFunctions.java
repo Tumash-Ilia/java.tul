@@ -15,9 +15,8 @@ public class WalletFunctions {
      * Metoda formátuje informace o účtech pro hezké zobrazení na obrazovce
      *
      * @return formatovny řetězec
-     * @throws IOException
      */
-    public static String showWallets(){
+    public static String showWallets() {
         ArrayList<Wallet> wallets = User.getWallets();
         String name = User.getName();
         String surname = User.getSurname();
@@ -39,7 +38,7 @@ public class WalletFunctions {
     }
 
     /**
-     * Metoda pro ukládání formátované informace stavu účtu do souboru
+     * Metoda pro ukládání formátované informace o stavu účtu do souboru
      */
     public static void saveWalletsInfo() {
         File filePath = new File("data");

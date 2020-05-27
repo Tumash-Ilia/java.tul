@@ -74,7 +74,7 @@ public class User {
     }
 
     /**
-     * Smazání všech účtu.
+     * Smazání všech účtu
      */
     public void deleteAllWallets() {
         wallets.removeAll(wallets);
@@ -199,10 +199,8 @@ public class User {
 
     /**
      * Metoda přepočítává zůstatky účtů s přihlédnutím k procentům získaných z transakcí z tabulky
-     *
-     * @throws IOException
      */
-    public void addProfit(){
+    public void addProfit() {
         ComputingInfo depos = new ComputingInfo();
         double a = wallets.get(0).getBalance();
         double b = wallets.get(1).getBalance();
@@ -303,4 +301,4 @@ public class User {
         NameComparator ac = new NameComparator();
         wallets.sort(ac);
     }
- }
+}

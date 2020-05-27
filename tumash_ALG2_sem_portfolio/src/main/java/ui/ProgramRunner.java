@@ -1,6 +1,6 @@
 package ui;
 
-import java.io.IOException;
+
 
 /**
  * Spuštění programu

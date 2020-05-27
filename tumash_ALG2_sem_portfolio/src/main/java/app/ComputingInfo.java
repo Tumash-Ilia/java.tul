@@ -73,7 +73,6 @@ public class ComputingInfo implements ComputingInterface {
      *
      * @param name název účtu
      * @return procentní zisk na vklad při použití 5% vkladu
-     * @throws IOException
      */
     public double depositProfit(String name) {
         List<Double> list = XlsxEditor.geWalletProfit(name);

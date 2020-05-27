@@ -25,7 +25,6 @@ public class XlsxEditor {
      * Metoda která ukládá do Listu sloupec s procenty všech obchodů z tabulky
      *
      * @return List<Double> loupec s procenty všech obchodů
-     * @throws IOException
      */
     public static List<Double> getProfitColumn() {
         List<Double> list = new ArrayList<>();
@@ -56,7 +55,6 @@ public class XlsxEditor {
      *
      * @param name název účtu
      * @return List<Double> sloupec s procenty všech obchodů
-     * @throws IOException
      */
     public static List<Double> geWalletProfit(String name) {
         List<Double> list = new ArrayList<>();
@@ -74,7 +72,7 @@ public class XlsxEditor {
             }
             book.close();
         } catch (IOException e) {
-            System.out.println("Tabulka neexistuje, vytvorte tubulku");
+
         }
         return list;
     }
@@ -89,7 +87,6 @@ public class XlsxEditor {
      * @param maxPrice maximální cena
      * @param leverage leverage
      * @param wallet   název účtu
-     * @throws IOException
      */
     public static void addNewRow(String coin, int pos, int exchange, double minPrice, double maxPrice, int leverage, String wallet) {
         List<Double> list = new ArrayList<>();
@@ -165,9 +162,8 @@ public class XlsxEditor {
      * Metoda pro smazání řádku z tabulky
      *
      * @param index index řádku který chceme smazat
-     * @throws IOException
      */
-    public static void deleteRow(int index){
+    public static void deleteRow(int index) {
         try (FileInputStream is = new FileInputStream(file)) {
             Workbook book = new XSSFWorkbook(is);
             Sheet sheet = book.getSheetAt(0);
@@ -200,10 +196,8 @@ public class XlsxEditor {
 
     /**
      * Metoda pro hezky výpis tabulky na obrazovku
-     *
-     * @throws IOException
      */
-    public static void printTable(){
+    public static void printTable() {
         try (FileInputStream is = new FileInputStream(file)) {
             Workbook book = new XSSFWorkbook(is);
             Sheet sheet = book.getSheetAt(0);
@@ -246,7 +240,7 @@ public class XlsxEditor {
                 cellN = 0;
                 i++;
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println("Tabulka neexistuje, vytvorte tubulku");
         }
     }

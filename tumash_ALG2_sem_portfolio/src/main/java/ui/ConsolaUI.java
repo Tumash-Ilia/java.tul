@@ -57,13 +57,12 @@ public class ConsolaUI {
 
     /**
      * Hlavní menu
-     *
-     * @throws IOException
+
      */
     private void menuMain(){
         boolean end = false;
         while (!end) {
-            System.out.println("\nVitejte, " + user.getName() + " " + user.getSurname() + "!");
+            System.out.println("\n****Vitejte, " + user.getName() + " " + user.getSurname() + "!****");
             System.out.println("1. Sprava uctu");
             System.out.println("2. Investicni tabulka");
             System.out.println("3. Informace o burzovnich obchodech");
@@ -93,8 +92,7 @@ public class ConsolaUI {
 
     /**
      * Menu pro správu účtů
-     *
-     * @throws IOException
+
      */
     private void menuWallet(){
         boolean end = false;
@@ -200,8 +198,7 @@ public class ConsolaUI {
 
     /**
      * Menu pro správu tabulky
-     *
-     * @throws IOException
+
      */
     private void menuTable(){
         boolean end = false;
@@ -264,8 +261,7 @@ public class ConsolaUI {
 
     /**
      * Menu pro výpis informaci o burzovnich obchodech
-     *
-     * @throws IOException
+
      */
     private void menuDeals(){
         ComputingInfo cu = new ComputingInfo();
@@ -337,7 +333,7 @@ public class ConsolaUI {
     /**
      * Kontrola vstupu pro typ Integer, vím že potřebujeme jen kladně čísla
      *
-     * @return
+     * @return Integer
      */
     private int inputInt() {
         int number;
@@ -359,7 +355,7 @@ public class ConsolaUI {
     /**
      * Kontrola vstupu pro typ Double, vím že potřebujeme jen kladně čísla
      *
-     * @return
+     * @return Double
      */
     private double inputDouble() {
         double number;
@@ -381,7 +377,7 @@ public class ConsolaUI {
     /**
      * Kontrola vstupu pro typ String, nemůže být prázdný, nemůže začínat číslem
      *
-     * @return
+     * @return String
      */
     private String inputString() {
         while (!sc.hasNext("[a-zA-Z]+[0-9]*")) {
