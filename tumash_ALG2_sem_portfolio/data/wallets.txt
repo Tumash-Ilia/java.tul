@@ -1,0 +1,4 @@
+	Ilia Tumash wallets:
+Binance    value:    490,0$
+Bitmex     value:    250,0$
+	Total amount:    740,0$
