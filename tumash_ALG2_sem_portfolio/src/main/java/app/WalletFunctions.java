@@ -17,7 +17,7 @@ public class WalletFunctions {
      * @return formatovny řetězec
      * @throws IOException
      */
-    public static String showWallets() throws IOException {
+    public static String showWallets(){
         ArrayList<Wallet> wallets = User.getWallets();
         String name = User.getName();
         String surname = User.getSurname();

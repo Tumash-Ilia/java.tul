@@ -16,7 +16,7 @@ public class ConsolaUI {
     private ComputingInfo compInf;
     private User user = new User();
 
-    public void startProgram() throws IOException {
+    public void startProgram(){
         menuStart();
         menuMain();
     }
@@ -60,7 +60,7 @@ public class ConsolaUI {
      *
      * @throws IOException
      */
-    private void menuMain() throws IOException {
+    private void menuMain(){
         boolean end = false;
         while (!end) {
             System.out.println("\nVitejte, " + user.getName() + " " + user.getSurname() + "!");
@@ -96,7 +96,7 @@ public class ConsolaUI {
      *
      * @throws IOException
      */
-    private void menuWallet() throws IOException {
+    private void menuWallet(){
         boolean end = false;
         while (!end) {
             System.out.println("\n****Zde muzete spravovat sve ucty****");
@@ -203,7 +203,7 @@ public class ConsolaUI {
      *
      * @throws IOException
      */
-    private void menuTable() throws IOException {
+    private void menuTable(){
         boolean end = false;
         while (!end) {
             System.out.println("\n****Zde muzete spravovat tabulku****");
@@ -267,7 +267,7 @@ public class ConsolaUI {
      *
      * @throws IOException
      */
-    private void menuDeals() throws IOException {
+    private void menuDeals(){
         ComputingInfo cu = new ComputingInfo();
         boolean end = false;
         while (!end) {

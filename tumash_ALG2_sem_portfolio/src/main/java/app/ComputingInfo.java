@@ -8,13 +8,13 @@ import java.util.List;
 public class ComputingInfo implements ComputingInterface {
 
     @Override
-    public int allDeals() throws IOException {
+    public int allDeals() {
         List<Double> list = XlsxEditor.getProfitColumn();
         return list.size();
     }
 
     @Override
-    public int successfulDeals() throws IOException {
+    public int successfulDeals() {
         List<Double> list = XlsxEditor.getProfitColumn();
         int cnt = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -27,13 +27,12 @@ public class ComputingInfo implements ComputingInterface {
     }
 
     @Override
-    public int unsuccessfulDeals() throws IOException {
-        List<Double> list = XlsxEditor.getProfitColumn();
+    public int unsuccessfulDeals() {
         return allDeals() - successfulDeals();
     }
 
     @Override
-    public double allProfit() throws IOException {
+    public double allProfit() {
         List<Double> list = XlsxEditor.getProfitColumn();
         double sum = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -46,7 +45,7 @@ public class ComputingInfo implements ComputingInterface {
     }
 
     @Override
-    public double allLoss() throws IOException {
+    public double allLoss() {
         List<Double> list = XlsxEditor.getProfitColumn();
         double sum = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -59,12 +58,12 @@ public class ComputingInfo implements ComputingInterface {
     }
 
     @Override
-    public double netProfit() throws IOException {
+    public double netProfit() {
         return allProfit() + allLoss();
     }
 
     @Override
-    public double averageProfit() throws IOException {
+    public double averageProfit() {
         List<Double> list = XlsxEditor.getProfitColumn();
         return netProfit() / list.size();
     }
@@ -76,7 +75,7 @@ public class ComputingInfo implements ComputingInterface {
      * @return procentní zisk na vklad při použití 5% vkladu
      * @throws IOException
      */
-    public double depositProfit(String name) throws IOException {
+    public double depositProfit(String name) {
         List<Double> list = XlsxEditor.geWalletProfit(name);
         double sum = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -85,12 +84,4 @@ public class ComputingInfo implements ComputingInterface {
         }
         return sum / 20;
     }
-
-//    public static void main(String[] args) throws IOException {
-//        ComputingInfo cs = new ComputingInfo();
-//        System.out.println(cs.depositProfit("BitMEX"));
-//        System.out.println(cs.depositProfit("Binance"));
-//        System.out.println(cs.netProfit());
-//    }
-
 }

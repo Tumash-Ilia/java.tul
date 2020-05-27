@@ -43,7 +43,7 @@ public class User {
      * Metoda pro přidání účtu uživateli
      *
      * @param walletName název účtu
-     * @param amount počáteční bilans účtu
+     * @param amount     počáteční bilans účtu
      */
     public void addWallet(String walletName, double amount) {
         if (wallets.size() < 2) {
@@ -168,17 +168,13 @@ public class User {
         File filePath = new File("data");
         List<Character> list = new ArrayList<>();
         if (filePath.isDirectory()) {
-            if (new File(filePath + "\\walletBackup.txt").exists()) {
-                try (FileInputStream fin = new FileInputStream(filePath + "\\walletBackup.txt")) {
-                    int i = -1;
-                    while ((i = fin.read()) != -1) {
-                        list.add((char) i);
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
+            try (FileInputStream fin = new FileInputStream(filePath + "\\walletBackup.txt")) {
+                int i = -1;
+                while ((i = fin.read()) != -1) {
+                    list.add((char) i);
                 }
-            } else {
-                System.out.println("File save.txt neexistuje");
+            } catch (IOException e) {
+                System.out.println("File walletBackup.txt neexistuje");
                 return;
             }
         } else {
@@ -206,7 +202,7 @@ public class User {
      *
      * @throws IOException
      */
-    public void addProfit() throws IOException {
+    public void addProfit(){
         ComputingInfo depos = new ComputingInfo();
         double a = wallets.get(0).getBalance();
         double b = wallets.get(1).getBalance();
@@ -255,7 +251,7 @@ public class User {
             }
         }
         String saveFile = name + " " + surname;
-        ;
+
         try (FileOutputStream fos = new FileOutputStream(filePath + "\\userbackup.txt")) {
             byte[] buffer = saveFile.getBytes();
             fos.write(buffer, 0, buffer.length);
@@ -271,18 +267,13 @@ public class User {
         File filePath = new File("data");
         List<Character> list = new ArrayList<>();
         if (filePath.isDirectory()) {
-            if (new File(filePath + "\\userbackup.txt").exists()) {
-                try (FileInputStream fin = new FileInputStream(filePath + "\\userbackup.txt")) {
-                    int i = -1;
-                    while ((i = fin.read()) != -1) {
-                        list.add((char) i);
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
+            try (FileInputStream fin = new FileInputStream(filePath + "\\userbackup.txt")) {
+                int i = -1;
+                while ((i = fin.read()) != -1) {
+                    list.add((char) i);
                 }
-            } else {
+            } catch (IOException e) {
                 System.out.println("File userbackup.txt neexistuje");
-                return;
             }
         } else {
             System.out.println("Directory data neexistuje");
@@ -312,64 +303,4 @@ public class User {
         NameComparator ac = new NameComparator();
         wallets.sort(ac);
     }
-
-
-    // public static void main(String[] args) throws IOException {
-//
-    //      User user = new User("Ilia", "Tumash");
-//        user.addWallet("BitMEX", 100);
-//        user.addWallet("Binance", 100);
-//        user.addProfit();
-//        WalletFunctions.makeBackupCopy();
-//        System.out.println(WalletFunctions.showWallets());
-//        System.out.println();
-//      user.createWalletFromSave();
-//       System.out.println(WalletFunctions.showWallets());
-//       System.out.println();
-//
-//
-    //  }
-//        System.out.println(WalletFunctions.showWallets());
-//        System.out.println();
-//       addProfit();
-//        WalletFunctions.makeBackupCopy();
-//       System.out.println(WalletFunctions.showWallets());
-//       System.out.println();
-//    }
-//
-//        user.deleteWallet(0);
-//        user.deleteWallet(0);
-//
-//        System.out.println(user.showWallets());
-//        System.out.println();
-//
-//        user.createWalletFromSave();
-//        System.out.println(user.showWallets());
-//        System.out.println();
-//
-//        user.addWallet("Binanewcc"); // o
-//        user.renameWallet(0,"Binance");
-//        System.out.println(user.showWallets());
-//        System.out.println();
-//        user.transferMoney(0,250);
-//        System.out.println(user.showWallets());
-//        System.out.println();
-//
-//        user.makeDeposit(0,240);
-//        System.out.println(user.showWallets());
-//        System.out.println();
-//        user.saveWalletsInfo();
-//
-//        user.makeDeposit(0,240);
-//        System.out.println(user.showWallets());
-//        System.out.println();
-//
-//        user.createWalletFromSave();
-//        System.out.println(user.showWallets());
-//        System.out.println();
-//        user.deleteWallet(0);
-//        user.deleteWallet(0);
-//        System.out.println(user.showWallets());
-//        System.out.println();
-//    }
-}
+ }

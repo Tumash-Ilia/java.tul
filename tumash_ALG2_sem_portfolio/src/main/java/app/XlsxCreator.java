@@ -6,6 +6,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -46,7 +47,7 @@ public class XlsxCreator {
      * @param sheetName název stránky v tabulce
      * @throws IOException
      */
-    public static void createTable(String sheetName) throws IOException {
+    public static void createTable(String sheetName){
         Workbook book = new XSSFWorkbook();
         Sheet sheet = book.createSheet(sheetName);
         Row row = sheet.createRow(0);
@@ -89,14 +90,14 @@ public class XlsxCreator {
         cell.setCellValue("Wallet");
 
         sheet.autoSizeColumn(1);
-        try {
-            FileOutputStream out = new FileOutputStream(file.getAbsolutePath());
+        try (FileOutputStream out = new FileOutputStream(file.getAbsolutePath())){
             book.write(out);
             book.close();
-            out.close();
             System.out.println("Tabulka uspesne vytvorena!");
-        } catch (NullPointerException e) {
-            System.out.println("Tabulka uz existuje");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e){
+            System.out.println("Nejde vytvorit tabulku, tabulka uz existuje");
         }
 
     }
@@ -110,15 +111,8 @@ public class XlsxCreator {
         } catch (NullPointerException e) {
             System.out.println("Tabulka neexistuje");
             return;
-        }
+         }
         System.out.println("Tubalka je smazana");
     }
-
-//    public static void main(String[] args) throws IOException {
-//        createTableFile();
-//        createTable("Trades");
-//
-//        // SNACHALA SOZDAT FILE!!!
-//    }
 
 }
