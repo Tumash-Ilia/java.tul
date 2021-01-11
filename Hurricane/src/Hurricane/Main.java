@@ -5,12 +5,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static Hurricane.HurricaneData.readFileName;
+
 public class Main {
         public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
         HurricaneData hd = new HurricaneData();
-        hd.read();
+        hd.read(readFileName());
         boolean end = false;
         while(!end){
             System.out.println("Vyberte jednu moznost: ");

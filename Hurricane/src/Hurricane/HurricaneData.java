@@ -1,26 +1,38 @@
 package Hurricane;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 
 public class HurricaneData {
     static List<Hurricane> hurricane = new ArrayList<>();
 
-    public void read() throws IOException {
-        File data = new File("hurricanedata.txt");
-        Scanner sc = new Scanner(data);
-        while (sc.hasNext()) {
-            int year = sc.nextInt();
-            String month = sc.next();
-            int pressure = sc.nextInt();
-            int speed = sc.nextInt();
-            String name = sc.next();
-            Hurricane h = new Hurricane(year, month, pressure, speed, name);
-            hurricane.add(h);
-        }
+    public void read(String fileName){
+        File data = new File(fileName);
+      try  (Scanner sc = new Scanner(data)) {
+          while (sc.hasNext()) {
+              int year = sc.nextInt();
+              String month = sc.next();
+              int pressure = sc.nextInt();
+              int speed = sc.nextInt();
+              String name = sc.next();
+              Hurricane h = new Hurricane(year, month, pressure, speed, name);
+              hurricane.add(h);
+          }
+      }catch (IOException e){
+          System.out.println(fileName + " neexistuje");
+          read(readFileName());
+      }
     }
+
+    public static String readFileName(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Zadejte nazev souboru: ");
+        String s = sc.nextLine();
+        s += ".txt";
+        return s;
+    }
+
 
     public List<Hurricane> findByYears(int year1, int year2) {
         List<Hurricane> list = new ArrayList<>();

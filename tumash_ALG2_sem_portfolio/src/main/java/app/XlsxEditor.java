@@ -187,7 +187,6 @@ public class XlsxEditor {
             sheet.autoSizeColumn(1);
             FileOutputStream out = new FileOutputStream(file.getAbsolutePath());
             book.write(out);
-            is.close();
             book.close();
         } catch (IOException e) {
             System.out.println("Tabulka neexistuje, vytvorte tubulku");

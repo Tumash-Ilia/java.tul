@@ -3,7 +3,7 @@ package app;
 /**
  * Poposuje učet
  */
-public class Wallet {
+public class Wallet implements Comparable<Wallet>{
     private double balance = 0;
     private String walletName;
     private double profit = 0;
@@ -70,4 +70,10 @@ public class Wallet {
         String s = String.format("%-10s%-10s%6.1f%s", walletName, " value: ", balance, "$");
         return s;
     }
+
+    @Override
+    public int compareTo(Wallet o) {
+        return walletName.compareTo(o.getWalletName());
+    }
+
 }

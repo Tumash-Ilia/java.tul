@@ -1,0 +1,98 @@
+insert into address values (1,'Praha', 'Slunečná', 2, 10000);
+insert into address values (2,'Jablonec nad Nisou', 'Poštovní', 4282, 46601);
+insert into address values (3,'Liberec', 'Ještědská', 557, 46007);
+insert into address values (4,'Praha', 'Plzeňská', 441, 15000);
+insert into address values (5,'Liberec', 'Polní', 622, 46001);
+insert into address values (6,'Praha', 'Nám. Interbrigády', 948, 16000);
+insert into address values (7,'Jablonec nad Nisou', 'Nemocniční', 4446, 46001) ;
+insert into address values (8,'Praha', 'Údolní', 316, 14200);
+insert into address values (9,'Liberec', 'Husova', 10, 46001);
+insert into address values (10,'Liberec', '1 máje', 25, 46007);
+insert into address values (11,'Praha', 'Lodžská', 6, 18100); 
+insert into address values (12,'Praha', 'Fajtlova', 90, 16100); 
+insert into address values (13,'Liberec', 'Vrchlického', 46, 46014); 
+insert into address values (14,'Praha', 'Dlouhomostecká', 21, 15000); 
+insert into address values (15,'Liberec', 'Archeologická', 52, 15500); 
+insert into address values (16,'Liberec', 'Tanvaldská', 27, 46024); 
+insert into address values (17,'Praha', 'Skandinávská', 15, 15500) ; 
+insert into address values (18,'Praha', 'Sofijské nám.', 3, 14300); 
+insert into address values (19,'Liberec', 'Kateřinská', 200, 46017);
+insert into address values (20,'Liberec', 'Česká', 15, 46312); 
+insert into address values (21,'Pardubice', 'Kyjevská', 6, 53003); 
+insert into address values (22,'Pardubice', 'Hraniční', 40, 53003);
+insert into address values (23,'Pardubice', 'Masarykovo nám.', 67, 53002); 
+insert into address values (24,'Pardubice', 'Erno Košťála', 87, 53012); 
+insert into address values (25,'Brno', 'Jihlavská', 20, 62500); 
+insert into address values (26,'Brno', 'Gebauerova', 511, 61500); 
+insert into address values (27,'Brno', 'Viniční', 23, 61500) ; 
+insert into address values (28,'Mladá Boleslav', 'Olbrachtova', 3, 29301);
+insert into address values (29,'Mladá Boleslav', 'Máchova', 13, 29301); 
+insert into address values (30,'Mladá Boleslav', 'Jiráskova', 2, 29301);
+
+insert into manufacturer values (1,'7725111222', 1);
+insert into manufacturer values (2,'7765214232', 2);
+insert into manufacturer values (3,'7875141822', 3);
+insert into manufacturer values (4,'7225761282', 4);
+insert into manufacturer values (5,'7575711282', 5);
+insert into manufacturer values (6,'7875191022', 6);
+insert into manufacturer values (7,'7735161232', 7);
+insert into manufacturer values (8,'7765170262', 8);
+insert into manufacturer values (9,'7769012872', 9);
+insert into manufacturer values (10,'775131426', 10);
+
+
+insert into medicine  values (1,'Paralen', '2022/02/04', 120, 'structure', 'Pfizer');
+insert into medicine  values (2,'Ibalgin', '2023/01/14', 100, 'structure', 'Novartis');
+insert into medicine  values (3,'Aspirin', '2022/05/09', 95, 'structure', 'Roche Holding');
+insert into medicine  values (4,'Panadol', '2021/08/07', 235, 'structure', 'Merck & Co');
+insert into medicine  values (5,'Rennie Antacidum', '2024/09/10', 310, 'structure', 'Sanofi');
+insert into medicine  values (6,'Acylpyrin', '2023/11/09', 65, 'structure', 'GlaxoSmithKline');
+insert into medicine  values (7,'Olynth', '2022/07/21', 287, 'structure', 'Eli Lilly');
+insert into medicine  values (8,'Nalgesin', '2024/04/19', 186, 'structure', 'AbbVie');
+insert into medicine  values (9,'Celaskon', '2021/05/21', 211, 'structure', 'Merck');
+insert into medicine  values (10,'Imodium', '2023/09/16', 175, 'structure', 'McKesson ');
+
+insert into pharmacy values (1,'EUC', 11);
+insert into pharmacy values (2,'BENU', 12);
+insert into pharmacy values (3,'Dr.Max', 13);
+insert into pharmacy values (4,'PharmGo', 14);
+insert into pharmacy values (5,'PharmGo', 15);
+insert into pharmacy values (6,'EUC', 16);
+insert into pharmacy values (7,'BENU', 17);
+insert into pharmacy values (8,'PharmGo', 18);
+insert into pharmacy values (9,'Dr.Max', 19);
+insert into pharmacy values (10,'Dr.Max', 20);
+
+insert into storage values (1,1, 20, 21);
+insert into storage values (1,2, 22, 21);
+insert into storage values (1,3, 32, 21);
+insert into storage values (2,4, 32, 22);
+insert into storage values (2,5, 12, 22);
+insert into storage values (2,7, 40, 22);
+insert into storage values (3,8, 31, 23);
+insert into storage values (3,2, 52, 23);
+insert into storage values (4,9, 14, 24);
+insert into storage values (4,10, 8, 24);
+
+insert into request values (1,'2020/02/14',10, 1, 1, 1);
+insert into request values (2,'2020/06/05',8, 2, 1, 2);
+insert into request values (3,'2020/08/11',10, 2, 3, 2);
+insert into request values (4,'2020/04/13',13, 2, 3, 8);
+insert into request values (5,'2020/11/05',7, 3, 4, 9);
+insert into request values (6,'2020/02/12',4, 3, 3, 2);
+insert into request values (7,'2020/04/14',20, 4, 2, 7);
+insert into request values (8,'2020/01/17',15, 5, 3, 2);
+insert into request values (9,'2020/06/18',3, 6, 4, 10);
+insert into request values (10,'2020/09/03',9, 7, 1, 3);
+
+insert into supply values (1,'2019/02/14',8, 1, 10,4); 
+insert into supply values (2,'2019/04/03',20, 2, 1,1);
+insert into supply values (3,'2019/07/18',22, 3, 2,1);
+insert into supply values (4,'2019/07/21',32, 5, 3,1);
+insert into supply values (5,'2019/09/09',12, 7, 4,2);
+insert into supply values (6,'2019/06/04',40, 4, 5,2);
+insert into supply values (7,'2019/06/20',31, 8, 7,2);
+insert into supply values (8,'2019/10/21',52, 10, 8,3);
+insert into supply values (9,'2019/03/15',14, 3, 2,3);
+insert into supply values (10,'2019/07/04',8, 8, 9,4);
+

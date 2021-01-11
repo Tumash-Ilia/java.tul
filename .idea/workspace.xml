@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fbd41494-4fd1-435e-8307-f3e6fb2bf6d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Zkouska/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zkouska/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zkouska/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zkouska/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zkouska/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zkouska/Zkouska.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zkouska/src/APP/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zkouska/src/APP/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zkouska/src/APP/Znamky.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zkouska/src/UI/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hurricane/hurricanedata.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hurricane/out/production/Hurricane/Hurricane/HurricaneData.class" beforeDir="false" afterPath="$PROJECT_DIR$/Hurricane/out/production/Hurricane/Hurricane/HurricaneData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hurricane/out/production/Hurricane/Hurricane/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Hurricane/out/production/Hurricane/Hurricane/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hurricane/src/Hurricane/HurricaneData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hurricane/src/Hurricane/HurricaneData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hurricane/src/Hurricane/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hurricane/src/Hurricane/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/data/tabulka.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/data/walletBackup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/data/walletBackup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/src/main/java/app/Wallet.java" beforeDir="false" afterPath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/src/main/java/app/Wallet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/src/main/java/app/XlsxEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/src/main/java/app/XlsxEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/target/classes/app/Wallet.class" beforeDir="false" afterPath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/target/classes/app/Wallet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/target/classes/app/XlsxEditor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/target/classes/app/XlsxEditor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/target/classes/app/XlsxEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/tumash_ALG2_sem_portfolio/target/classes/app/XlsxEditor.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mFayKz0Hm23vD82FT5KNO0GcY3" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbd41494-4fd1-435e-8307-f3e6fb2bf6d2" name="Default Changelist" comment="" />
+      <created>1609092045161</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609092045161</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="174" key="FileChooserDialogImpl" timestamp="1609092154416">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="549" y="174" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1609092154416" />
+    <state x="209" y="53" key="new project wizard" timestamp="1609092155612">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="209" y="53" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1609092155612" />
+  </component>
+</project>
